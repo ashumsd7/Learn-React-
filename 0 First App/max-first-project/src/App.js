@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <ExpenseItem/>
-      <h2>Let's get started!</h2>
+      <h2>Let's  sdd get started!</h2>
       <h4>I am also visible</h4>
     </div>
   );
