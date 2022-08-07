@@ -2,7 +2,7 @@ import React from "react";
 import "./NewExpense.css";
 import ExpenseForm from "./ExpenseForm";
 
-const NewExpense = () => {
+const NewExpense = (props) => {
 
     const saveExpenseDateHandler=(enteredExpenseData)=>{
         console.log("CALL HUA KYA")
@@ -13,6 +13,7 @@ const NewExpense = () => {
         
     }
     console.log("expenseData", expenseData)
+ props.onAddExpense(expenseData)
     }
   return (
     <div className="new-expense">
