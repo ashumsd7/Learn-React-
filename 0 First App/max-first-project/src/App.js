@@ -1,5 +1,6 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import NewExpense from "./components/NewExpense/NewExpense";
+import ExpensesChart from "./components/Expenses/ExpensesChart";
 import { useState } from "react";
 
 function App() {
@@ -45,6 +46,10 @@ function App() {
 
   return (
     <div>
+
+   <ExpensesChart expenses={expenses}/>
+
+
       {!isAddingNewExpense ? (
         <button onClick={onButtonClick}>
           Add New Expense
