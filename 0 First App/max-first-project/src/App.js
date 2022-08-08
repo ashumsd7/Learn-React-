@@ -25,6 +25,7 @@ function App() {
     },
   ];
   const [expenses, setExpenses] = useState(DUMMY_DATA);
+  const [isAddingNewExpense, changeView] = useState(false);
 
   function addExpensesHandler(expense) {
     console.log("IN APP>JS", expense);
@@ -32,13 +33,25 @@ function App() {
     setExpenses((prevState) => {
       console.log("prevState", prevState);
       console.log("new", [expense, ...prevState]);
+      onButtonClick();
       return [expense, ...prevState];
     });
   }
 
+
+  function onButtonClick(){
+    changeView(!isAddingNewExpense)
+  }
+
   return (
     <div>
-      <NewExpense onAddExpense={addExpensesHandler} />
+      {!isAddingNewExpense ? (
+        <button onClick={onButtonClick}>
+          Add New Expense
+        </button>
+      ) : (
+        <NewExpense onAddExpense={addExpensesHandler} />
+      )}
 
       <ul>
         {expenses.length == 0 ? (
