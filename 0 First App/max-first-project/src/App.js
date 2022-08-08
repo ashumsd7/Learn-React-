@@ -1,6 +1,6 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import NewExpense from "./components/NewExpense/NewExpense";
-import {useState} from 'react'
+import { useState } from "react";
 
 function App() {
   const DUMMY_DATA = [
@@ -29,23 +29,19 @@ function App() {
   function addExpensesHandler(expense) {
     console.log("IN APP>JS", expense);
     // setExpenses([expense,...expenses])
-    setExpenses((prevState)=>{
-      console.log('prevState', prevState)
-      console.log("new",  [expense,...prevState])
-      return [expense,...prevState]
-    })
-    
+    setExpenses((prevState) => {
+      console.log("prevState", prevState);
+      console.log("new", [expense, ...prevState]);
+      return [expense, ...prevState];
+    });
   }
 
   return (
     <div>
       <NewExpense onAddExpense={addExpensesHandler} />
-
-
-      <h1>{expenses.length}</h1>
-{expenses.map(item=>item.title)}
-      {expenses.map((expense) => (
+      {expenses.map((expense, index) => (
         <ExpenseItem
+          key={index}
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
