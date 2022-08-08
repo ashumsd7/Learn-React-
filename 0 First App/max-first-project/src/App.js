@@ -39,7 +39,11 @@ function App() {
   return (
     <div>
       <NewExpense onAddExpense={addExpensesHandler} />
-      {expenses.map((expense, index) => (
+ 
+
+ {expenses.length == 0 ? <p>No Expensed</p> :
+
+      expenses.map((expense, index) => (
         <ExpenseItem
           key={index}
           title={expense.title}
