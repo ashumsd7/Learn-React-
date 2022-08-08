@@ -10,6 +10,7 @@ const CourseInput = props => {
 
   const goalInputChangeHandler = event => {
     setEnteredValue(event.target.value);
+    setIsValid(true)
   };
 
   const formSubmitHandler = event => {
@@ -18,6 +19,7 @@ const CourseInput = props => {
       setIsValid(false)
       return;
     }
+
     props.onAddGoal(enteredValue);
   };
 
