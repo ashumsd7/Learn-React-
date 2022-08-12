@@ -5,6 +5,7 @@ import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
 
 const Login = (props) => {
+  console.log("MOUNTING")
   const [enteredEmail, setEnteredEmail] = useState('');
   const [emailIsValid, setEmailIsValid] = useState();
   const [enteredPassword, setEnteredPassword] = useState('');
@@ -12,6 +13,10 @@ const Login = (props) => {
   const [formIsValid, setFormIsValid] = useState(false);
 
 
+
+  useEffect(()=>{
+   console.log(">>>>>>>>>>> EFFECT RUNNING") 
+  },[])
 
 
   useEffect(() => {
