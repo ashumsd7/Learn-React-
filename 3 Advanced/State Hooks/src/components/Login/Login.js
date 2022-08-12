@@ -14,11 +14,6 @@ const Login = (props) => {
 
 
 
-  useEffect(()=>{
-   console.log(">>>>>>>>>>> EFFECT RUNNING") 
-  },[])
-
-
   useEffect(() => {
     console.log("CHECKING FORM VALIDITY")
   let timer=   setTimeout(() => {
