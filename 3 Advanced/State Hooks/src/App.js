@@ -2,6 +2,7 @@ import React, { useState,useEffect } from "react";
 
 import Login from "./components/Login/Login";
 import Home from "./components/Home/Home";
+import CountDown from "./components/Home/CountDown";
 import MainHeader from "./components/MainHeader/MainHeader";
 import AuthContext from "./components/store/auth-context";
 
@@ -39,11 +40,13 @@ function App() {
     <AuthContext.Provider value={{
       isLoggedIn:false
     }}>
+
       <MainHeader isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
       <main>
         {!isLoggedIn && <Login onLogin={loginHandler} />}
         {isLoggedIn && <Home onLogout={logoutHandler} />}
       </main>
+      <CountDown/>
     </AuthContext.Provider>
   );
 }
