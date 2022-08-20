@@ -1,37 +1,27 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import MoviesList from "./components/MoviesList";
 import "./App.css";
 
 function App() {
-
-
   const [movies, setMovies] = useState([]);
-  const dummyMovies = [];
 
-  function fetchMoviesHandler() {
-    fetch("https://swapi.dev/api/films")
-      .then((res) => {
-        //data
+  async function fetchMoviesHandler() {
+    const res = await fetch("https://swapi.dev/api/films");
 
-        return res.json();
-      })
-      .then((data) => {
-        console.log("REAL DATA", data.results);
+    const data = await res.json();
 
-        const transformedMovies= data.results.map(movie=>{
-             return {
-              id: movie.episode_id,
-              title: movie.title,
-              openingText: movie.opening_crawl,
-              releaseDate:movie.release_date
+    const transformedMovies = data.results.map((movie) => {
+      return {
+        id: movie.episode_id,
+        title: movie.title,
+        openingText: movie.opening_crawl,
+        releaseDate: movie.release_date,
+      };
+    });
 
-             }
-        })
-
-        console.log(">>>>>>>>>", transformedMovies)
-        setMovies(transformedMovies)
-      });
+    console.log(">>>>>>>>>", transformedMovies);
+    setMovies(transformedMovies);
   }
 
   return (
