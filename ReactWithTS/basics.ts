@@ -25,10 +25,15 @@ let hobbies :string[]
 
 hobbies =['ashu', 'as']
 
-let person :{
+
+// Type Aliasing
+
+type Person = {
     name:string,
     age:number
 }
+
+let person :Person
 
  person ={
     name:'Max',
@@ -36,13 +41,13 @@ let person :{
 }
 
 
+
+
+
 // Array of Objects
 
 
-let people : {
-    name:string,
-    age:number
-}[];
+let people : Person[];
 
 people = [{
     name:'Hello',
@@ -59,6 +64,8 @@ people = [{
 
 
 
+
+
 let course = 'Udemy '
 
 
@@ -69,6 +76,12 @@ course ='Cousera'
 let courseId : string | number = 'MY COURSE'
 
 courseId= 124;
+
+
+
+
+
+
 
 
 
