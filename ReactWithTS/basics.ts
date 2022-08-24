@@ -53,3 +53,23 @@ people = [{
 
 
 
+// Type Inference
+
+
+
+
+
+let course = 'Udemy '
+
+
+
+course ='Cousera'
+
+
+let courseId : string | number = 'MY COURSE'
+
+courseId= 124;
+
+
+
+
