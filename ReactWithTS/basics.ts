@@ -60,3 +60,24 @@ function add(a: number, b: number) {
 function printOutput(value: any) {
   console.log(value);
 }
+
+
+
+function insertAtBeginning<T>(array:T[], value:T){
+
+
+    const newArray = [value,...array]
+
+    return newArray;
+
+}
+
+
+let demoArray=[1,2,3,4,5]
+
+let updatedArray= insertAtBeginning(demoArray, 1)
+
+updatedArray[0].split()
+
+
+console.log(updatedArray);
