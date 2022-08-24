@@ -1,8 +1,8 @@
-function Todos() {
+import React from 'react'
+const  Todos:React.FC<{items:string[]}> =(props) =>{
   return (
     <ul>
-      <li>Apple</li>
-      <li>Banana</li>
+  {props.items.map(item=>{return <li>{item}</li>})}
     </ul>
   );
 }
