@@ -2,87 +2,61 @@
 
 let age: number;
 
-
-age=12
-
+age = 12;
 
 let myName: string;
 
+myName = "ashu";
 
-myName='ashu'
+let isActive: boolean;
 
+isActive = true;
 
+let hobbies: string[];
 
-
-let isActive: boolean
-
-isActive=true
-
-
-
-let hobbies :string[]
-
-
-hobbies =['ashu', 'as']
-
+hobbies = ["ashu", "as"];
 
 // Type Aliasing
 
 type Person = {
-    name:string,
-    age:number
-}
+  name: string;
+  age: number;
+};
 
-let person :Person
+let person: Person;
 
- person ={
-    name:'Max',
-    age: 32
-}
-
-
-
-
+person = {
+  name: "Max",
+  age: 32,
+};
 
 // Array of Objects
 
+let people: Person[];
 
-let people : Person[];
-
-people = [{
-    name:'Hello',
-    age:12
-    
-}]
-
-
-
+people = [
+  {
+    name: "Hello",
+    age: 12,
+  },
+];
 
 // Type Inference
 
+let course = "Udemy ";
 
+course = "Cousera";
 
+let courseId: string | number = "MY COURSE";
 
+courseId = 124;
 
+// FUNCTIONS AND TYPES
 
+function add(a: number, b: number) {
+  return a + b;
+}
 
-let course = 'Udemy '
-
-
-
-course ='Cousera'
-
-
-let courseId : string | number = 'MY COURSE'
-
-courseId= 124;
-
-
-
-
-
-
-
-
-
-
+function printOutput(value: any) {
+  console.log(value);
+}
