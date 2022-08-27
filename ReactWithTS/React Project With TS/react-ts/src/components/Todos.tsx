@@ -6,5 +6,5 @@ const  Todos:React.FC<{items:string[]}> =(props) =>{
     </ul>
   );
 }
-
+ 
 export default Todos;
